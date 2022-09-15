@@ -4,7 +4,7 @@ import Reply from "./Reply";
 
 export default function Comment(props) {
   const [text] = useState("");
-  const textfilter = comments.filter((x) => x.username.includes(text));
+  const textfilter = comments.filter((x) => x);
 
   return (
     <div>
@@ -32,6 +32,7 @@ export default function Comment(props) {
           </div>
         </div>
       ))}
+      {<Reply />}
     </div>
   );
 }
